@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
+<title>Login</title>
+</head> 
 <body>
-
+	<h2>Login</h2>
+	<br><br> 
+	
+	<a href="signup">Signup</a>
+	<a href="forgotpassword">Forgot Password</a>
 </body>
 </html>
