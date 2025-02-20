@@ -9,18 +9,41 @@
 <body>
 	
 	<h2>Signup</h2>
-		<form action="saveuser" method="post">
-			   FirstName: <input type="text" name="firstName"/> <br> <br>
-			   LastName: <input type="text" name="lastName" /><br><br>
+		<form action="saveuser" method="post"> 
+			<table>
 			
-			   Gender: Male<input type="radio" name="gender" value="male">
-					   Female<input type="radio" name="gender" value="female"> <br><br>
-					   		   
-			   Email: <input type="text" name="email"/> <br><br>
+			<tr>
+			    <td>FirstName:</td>
+			    <td> <input type="text" name="firstName"/> </td> 
+			  
+			  <tr>
+			   <td>LastName:</td>
+			   <td><input type="text" name="lastName" /></td>
+			  </tr> 
+			  
+			  <tr>
+			   <td>Gender:</td>
+			    <td><input type="radio" name="gender" value="male">Male &nbsp;
+			        <input type="radio" name="gender" value="female">Female</td>
+				</tr>
+				
+				<tr>	   		
+			   <td>Contact:</td> 
+			   <td><input type="text" name="contactNum"/></td>
+				</tr> 	   		   
+				
+			   <tr>
+			   <td>Email:</td> 
+			   <td><input type="text" name="email"/></td>
+			   </tr>
 			   
-			   Password:<input type="password" name="password"/> <br><br> 
+			   <tr>
+			   <td>Password:</td>
+			   <td><input type="password" name="password"/></td>
+			   </tr>
 			   
-			   <input type="submit" value="Signup"/>
+			   </table>
+			  <input type="submit" value="Signup"/>
 		</form>
 		
 		<br><br> 

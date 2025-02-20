@@ -8,15 +8,14 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="vehicle")
-public class VehicleEntitiy { 
+public class VehicleEntity { 
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer vehicleId;
 	private Integer userId;
-	private Integer registratiomNumber;
-	private Integer vehicleType;
-	
+	private String registratiomNum;
+	private String vehicleType;
 	public Integer getVehicleId() {
 		return vehicleId;
 	}
@@ -29,18 +28,20 @@ public class VehicleEntitiy {
 	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
-	public Integer getRegistratiomNumber() {
-		return registratiomNumber;
+	public String getRegistratiomNum() {
+		return registratiomNum;
 	}
-	public void setRegistratiomNumber(Integer registratiomNumber) {
-		this.registratiomNumber = registratiomNumber;
+	public void setRegistratiomNum(String registratiomNum) {
+		this.registratiomNum = registratiomNum;
 	}
-	public Integer getVehicleType() {
+	public String getVehicleType() {
 		return vehicleType;
 	}
-	public void setVehicleType(Integer vehicleType) {
+	public void setVehicleType(String vehicleType) {
 		this.vehicleType = vehicleType;
 	}
+	
+	
 	
 
 }
