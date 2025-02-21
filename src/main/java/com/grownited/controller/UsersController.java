@@ -6,22 +6,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.grownited.entity.UserEntity;
 import com.grownited.repository.UserRepository;
-
-
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import com.grownited.service.MailService;
 
 
 
 @Controller 
 public class UsersController { 
 			@Autowired
-	      UserRepository repositoryUser;  
+	      UserRepository repositoryUser;   
+			@Autowired
+			MailService serviceMail;
 			
 			@GetMapping(value = {"/","signup"})
 			public String signup() {
@@ -36,7 +35,8 @@ public class UsersController {
 	
 	@PostMapping("saveuser")
 	public String saveUser(UserEntity entityUser) {
-		repositoryUser.save(entityUser);
+		repositoryUser.save(entityUser);  
+		serviceMail.sendWelcomeMail(entityUser.getEmail(), entityUser.getFirstName());
 	return "Login";
 	} 
 	
